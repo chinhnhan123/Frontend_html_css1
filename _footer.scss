@@ -3,6 +3,7 @@
     grid-template-columns: 2fr 1fr 1fr 1fr ;
     grid-column-gap: 70px;
     padding-bottom: 70px;
+    padding-top: 50px;
     &-heading{
         font-size: 20px;
         font-weight: 400;
@@ -53,5 +54,13 @@ padding: 5px;
     }
     &-instagram{
         background-color: #FFB978;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 50px 20px;
     }
 }

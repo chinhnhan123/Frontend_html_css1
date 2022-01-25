@@ -120,54 +120,26 @@ body {
 
 
 
-// .block {
-//   text-align: center;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//   margin-bottom: 85px;
-//   &-caption {
-//     text-transform: uppercase;
-//     margin-bottom: 40px;
-//     position: relative;
-//     display: inline-block;
-//     padding: 0 10px;
-//   }
-//   &-caption:before {
-//     left: 0;
-//     transform: translateX(-100%) translateY(-50%);
-//   }
-//   &-caption:after {
-//     right: 0;
-//     transform: translateX(100%) translateY(-50%);
-//   }
-//   &-caption:before,
-//   &-caption:after {
-//     content: "";
-//     position: absolute;
-//     height: 2px;
-//     width: 30px;
-//     background-color: $primary-color;
-//     top: 50%;
-//   }
-//   &-caption--left {
-//     padding-left: 40px;
-//     margin-bottom: 30px;
-//   }
-//   &-caption--left:after {
-//     display: none;
-//   }
-//   &-caption--left:before {
-//     transform: none;
-//   }
-//   &-heading {
-//     font-size: 50px;
-//     line-height: 1.4;
-//     font-weight: 600;
-//     span {
-//       display: block;
-//     }
-//   }
-// }
+@media screen and (max-width: 767.98px) {
+.button{
+  padding: 10px 20px;
+}
+.block{
+  &-heading{
+    font-size: 35px;
+    text-align: center;
+    span{
+      display:unset;
+    }
+  }
+  &-caption{
+    margin-bottom: 20px;
+  }
+}
+}
 
+@media screen and (max-width: 1023.98px) {
+  .block{
+    margin-bottom: 40px;
+  }
+}

@@ -31,4 +31,13 @@
         right: 0;
         transform:translate(50%, -50%);
     }
+    @media screen and (max-width: 767.98px) {
+        margin: 0px auto 50px;
+    &-comment,
+    &-smile{
+        max-width: 20%;
+        transform:none;
+    }
+    }
+    
 }

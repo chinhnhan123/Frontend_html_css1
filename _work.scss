@@ -26,18 +26,6 @@
         padding: 40px 20px;
     }
 
-    &-item:hover{
-        border-color: transparent;
-        box-shadow: 0 0 50px 10px rgba(black, 0.03);
-    }
-
-    &-more:hover{
-        transition: all 0.2s linear;
-        border-color: $primary-color;
-        background-color: $primary-color;
-        color: white;
-    }
-
     &-image{
         margin-bottom: 35px;
         max-height: 115px;
@@ -61,6 +49,58 @@
         max-width: 100%;
         word-break: break-word;
     }
+
+    @media(hover:hover) {
+        &-item:hover{
+            border-color: transparent;
+            box-shadow: 0 0 50px 10px rgba(black, 0.03);
+        }
+    
+        &-more:hover{
+            transition: all 0.2s linear;
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: white;
+        }
+        
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        padding: 60px 0 20px;
+        &-item {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 25px;
+           
+        }
+        &-list{
+            display: grid;
+            justify-content: flex-start;
+            grid-auto-columns: 450px;
+            grid-auto-flow: column;
+            grid-gap:0 50px;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
+            scroll-padding: 1rem;
+            grid-template-columns: unset;
+            
+            &::-webkit-scrollbar {
+              display: none;
+              width: 0;
+            }
+            & > *{
+              scroll-snap-align: start;
+              width: 100%;
+            }
+        }
+
+    }
+    
 }
 
 
